@@ -1,6 +1,7 @@
 "use client";
 
 import { About } from "@/components/About";
+import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Pillars } from "@/components/Pillars";
@@ -14,6 +15,7 @@ export default function IndexPage() {
       </div>
       <Pillars />
       <About />
+      <Footer />
     </>
   );
 }

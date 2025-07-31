@@ -14,19 +14,21 @@ export const About = () => {
           {/* <div className="absolute top-0 left-0 rounded-md w-full h-full bg-[rgba(0,0,0,0.0)]" /> */}
         </div>
         <div className="col-span-1" />
-        <div className="col-span-6 flex flex-col justify-center relative top-[0.5vh]">
-          <span className="px-4 py-2 rounded text-base block w-fit mb-10 font-medium bg-russian-violet text-white">
+        <div className="col-span-6 flex flex-col justify-center">
+          <span className="px-4 py-2 rounded text-base block w-fit mb-7 font-medium bg-russian-violet text-white">
             why lifebeyondgraduation ?
           </span>
 
-          <p className="font-light text-lg/8 mb-8">
+          <p className="font-light text-[16px]/8 mb-7">
             Making the leap from the classroom to the real world can be
             overwhelming—suddenly, the rules change, and you’re expected to
             figure it all out on your own. Yet, there are few programs truly
             dedicated to guiding graduates through this crucial transition. This
             community exists to bridge that gap, equipping young adults with the
             skills, support, and confidence to thrive beyond the walls of
-            school.
+            school. Are you a final year student ?, interested in mentoring ?,
+            or you just want to partner with us in whatever way, register or get
+            in touch !
           </p>
 
           <div className="flex gap-4">
