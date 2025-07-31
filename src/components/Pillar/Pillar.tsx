@@ -15,7 +15,9 @@ export const Pillar: FC<TPillar> = ({
       </div>
       <div
         className={`py-8 px-6 shadow ${
-          isActive ? "bg-[#392759] text-white" : "bg-white text-[#392759]"
+          isActive
+            ? "bg-russian-violet text-white"
+            : "bg-white text-russian-violet"
         }`}
       >
         <p className="text-2xl font-medium mb-4">{heading}</p>

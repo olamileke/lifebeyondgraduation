@@ -10,7 +10,7 @@ export const Hero = () => (
         You’ve got the degree—now get the skills. From job interviews to
         budgeting and beyond, we help you thrive where school left off.
       </p>
-      <a className="p-5 rounded-md bg-[#392759] text-white text-center">
+      <a className="p-5 rounded-md bg-russian-violet text-white text-center">
         Join the Community
         <IoMdArrowUp className="inline ml-1 relative bottom-[1px] font-light rotate-45 text-xl" />
       </a>

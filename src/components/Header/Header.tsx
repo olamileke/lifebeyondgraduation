@@ -12,7 +12,7 @@ export const Header = () => (
         </div>
       </div>
 
-      <a className="text-[15px] text-white font-light py-3 px-5 rounded-md bg-[#392759]">
+      <a className="text-[15px] text-white font-light py-3 px-5 rounded-md bg-russian-violet">
         Blog{" "}
       </a>
     </div>

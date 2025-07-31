@@ -4,7 +4,8 @@
 @theme {
   --color-*: initial;
   --color-white: #ffffff;
-  --color-primary: #e8f0ff;
+  --color-slate-blue: #e8f0ff;
+  --color-russian-violet: #392759;
   --color-black: #000000;
 
   --font-*: initial;
@@ -27,6 +28,11 @@
 .pillars {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+*,
+html {
+  scroll-behavior: smooth !important;
 }
 
 body {

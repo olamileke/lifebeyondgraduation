@@ -5,7 +5,7 @@ import { Pillars } from "@/components/Pillars";
 export default function IndexPage() {
   return (
     <>
-      <div className="relative w-screen h-screen bg-primary text-black">
+      <div className="relative w-screen h-screen bg-slate-blue text-black">
         <Header />
         <Hero />
       </div>
