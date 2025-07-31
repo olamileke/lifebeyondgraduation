@@ -1,4 +1,5 @@
 import { IoMdArrowUp } from "react-icons/io";
+import { Link } from "../Link";
 
 export const Hero = () => (
   <section className="grid grid-cols-12 mx-auto max-w-[1200px] h-full py-[103px] py-5 px-10">
@@ -10,10 +11,9 @@ export const Hero = () => (
         You’ve got the degree—now get the skills. From job interviews to
         budgeting and beyond, we help you thrive where school left off.
       </p>
-      <a className="p-5 rounded-md bg-russian-violet text-white text-center">
+      <Link href={"/community"} isExternal={true}>
         Join the Community
-        <IoMdArrowUp className="inline ml-1 relative bottom-[1px] font-light rotate-45 text-xl" />
-      </a>
+      </Link>
     </div>
     <div className="col-span-1"></div>
     <div className="col-span-6">

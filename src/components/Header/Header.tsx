@@ -1,3 +1,5 @@
+import { Link } from "../Link";
+
 export const Header = () => (
   <header className="absolute top-0 left-0 w-full">
     <div className="flex justify-between items-center mx-auto py-5 max-w-[1200px]">
@@ -12,9 +14,9 @@ export const Header = () => (
         </div>
       </div>
 
-      <a className="text-[15px] text-white font-light py-3 px-5 rounded-md bg-russian-violet">
-        Blog{" "}
-      </a>
+      <Link href={"/blog"} size="sm">
+        Blog
+      </Link>
     </div>
   </header>
 );

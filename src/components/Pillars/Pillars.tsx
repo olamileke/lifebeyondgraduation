@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { IoMdArrowBack, IoMdArrowUp } from "react-icons/io";
 import { Pillar } from "../Pillar";
