@@ -1,8 +1,19 @@
-import { IoMdArrowUp } from "react-icons/io";
+import { useState } from "react";
 import { Link } from "../Link";
 import { Button } from "../Button";
+import { ContactDialog } from "@/components/ContactDialog";
 
 export const About = () => {
+  const [dialogOpen, setDialogOpen] = useState(false);
+
+  const handleDialogOpen = () => {
+    setDialogOpen(true);
+  };
+
+  const handleDialogClose = () => {
+    setDialogOpen(false);
+  };
+
   return (
     <section>
       <div className="mx-auto max-w-[1300px] p-24 mb-24 grid grid-cols-12 rounded-md bg-slate-blue">
@@ -34,11 +45,16 @@ export const About = () => {
             <Link href="https://bit.ly/register-lbg" classes="w-full">
               Register
             </Link>
-            <Button classes="w-full" handleClick={() => {}} isActive={false}>
+            <Button
+              classes="w-full"
+              handleClick={handleDialogOpen}
+              isActive={false}
+            >
               Get in touch
             </Button>
           </div>
         </div>
+        <ContactDialog isOpen={dialogOpen} handleClose={handleDialogClose} />
       </div>
     </section>
   );
