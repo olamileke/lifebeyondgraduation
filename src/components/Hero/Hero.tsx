@@ -11,7 +11,7 @@ export const Hero = () => (
         You’ve got the degree—now get the skills. From job interviews to
         budgeting and beyond, we help you thrive where school left off.
       </p>
-      <Link href={"/community"} isExternal={true}>
+      <Link href={"/community"} hasIcon={true}>
         Join the Community
       </Link>
     </div>

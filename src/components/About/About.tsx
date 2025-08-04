@@ -11,7 +11,6 @@ export const About = () => {
             className="rounded-md"
             src="https://res.cloudinary.com/olamileke/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1753969387/lifebeyondgraduation/leiada-krozjhen-rqaAWQgy05U-unsplash_dholtj.jpg"
           />
-          {/* <div className="absolute top-0 left-0 rounded-md w-full h-full bg-[rgba(0,0,0,0.0)]" /> */}
         </div>
         <div className="col-span-1" />
         <div className="col-span-6 flex flex-col justify-center">
@@ -32,7 +31,7 @@ export const About = () => {
           </p>
 
           <div className="flex gap-4">
-            <Link href="/register" classes="w-full" isExternal={true}>
+            <Link href="https://bit.ly/register-lbg" classes="w-full">
               Register
             </Link>
             <Button classes="w-full" handleClick={() => {}} isActive={false}>

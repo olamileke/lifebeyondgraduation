@@ -9,7 +9,7 @@ export const Button: FC<TButton> = ({
 }) => {
   const activeVariantClasses = isActive
     ? "bg-russian-violet text-white"
-    : "text-russian-violet border border-russian-violet font-medium";
+    : "text-russian-violet border border-russian-violet font-medium transition-colors duration-1000 hover:bg-russian-violet hover:text-white";
 
   return (
     <button

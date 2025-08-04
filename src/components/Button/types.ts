@@ -1,5 +1,5 @@
 import { TLink } from "../Link";
 
-export type TButton = Omit<TLink, "href" | "isExternal"> & {
+export type TButton = Omit<TLink, "href" | "hasIcon"> & {
   handleClick: () => void;
 };

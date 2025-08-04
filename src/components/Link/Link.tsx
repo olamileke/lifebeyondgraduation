@@ -9,22 +9,18 @@ export const Link: FC<TLink> = ({
   size = "md",
   classes = "",
   isActive = true,
-  isExternal = false,
+  hasIcon = false,
 }) => {
-  const activeVariantClasses = isActive
-    ? "bg-russian-violet text-white"
-    : "text-russian-violet border border-russian-violet font-medium";
-
   return (
     <NextLink
       href={href}
-      className={`px-5 ${
+      className={`px-5 bg-russian-violet text-white group duration-1000 transition-opacity opacity-100 hover:opacity-90 ${
         size === "sm" ? "py-3" : "py-5"
-      } rounded-md ${activeVariantClasses} text-center ${classes}`}
+      } rounded-md text-center ${classes}`}
     >
       {children}
-      {isExternal && (
-        <IoMdArrowUp className="inline ml-1 relative bottom-[1px] font-light rotate-45 text-xl" />
+      {hasIcon && (
+        <IoMdArrowUp className="inline ml-1 relative bottom-[1px] font-light text-xl transition-transform duration-1000 translate-x-0 translate-y-0 rotate-45 group-hover:translate-x-[2px] group-hover:-translate-y-[1px]" />
       )}
     </NextLink>
   );

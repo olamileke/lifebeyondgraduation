@@ -6,5 +6,5 @@ export type TLink = {
   size?: "sm" | "md";
   classes?: string;
   isActive?: boolean;
-  isExternal?: boolean;
+  hasIcon?: boolean;
 };
