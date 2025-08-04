@@ -1,6 +1,7 @@
 import { FC, useState, useEffect, ChangeEvent } from "react";
 import { TContactDialog, TFormField } from "./types";
 import { Button } from "../Button";
+import { sendMessage } from "./api";
 
 export const ContactDialog: FC<TContactDialog> = ({
   isOpen = false,
@@ -9,11 +10,13 @@ export const ContactDialog: FC<TContactDialog> = ({
   const [form, setForm] = useState<{
     [key in TFormField]: string;
   }>({ name: "", email: "", text: "" });
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     if (!isOpen) {
       window.document.body.style.overflowY = "visible";
       setForm({ name: "", email: "", text: "" });
+      setMessage("");
       return;
     }
 
@@ -29,6 +32,19 @@ export const ContactDialog: FC<TContactDialog> = ({
     setForm({ ...form, [field]: event.target.value });
   };
 
+  const handleSubmit = async (formData: FormData) => {
+    const message = await sendMessage(formData);
+
+    if (message.toLowerCase().includes("success")) {
+      setForm({ name: "", email: "", text: "" });
+      setTimeout(() => {
+        setMessage("");
+      }, 5000);
+    }
+
+    setMessage(message);
+  };
+
   return (
     <div
       className={`fixed top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.6)] flex justify-center items-center transition-opacity duration-1000 ${
@@ -39,9 +55,12 @@ export const ContactDialog: FC<TContactDialog> = ({
       <form
         className="w-[480px] bg-white p-8 rounded"
         onClick={(e) => e.stopPropagation()}
+        action={handleSubmit}
       >
         <p className="mb-5 text-[rgba(0,0,0,0.7)]">
-          Send your message and we'll get back to you as soon as possible.
+          {message.length > 0
+            ? message
+            : "Send your message via the form below"}
         </p>
 
         <input
@@ -79,9 +98,7 @@ export const ContactDialog: FC<TContactDialog> = ({
           }}
         />
 
-        <Button handleClick={() => {}} classes="w-full py-3">
-          Send
-        </Button>
+        <Button classes="w-full py-3">Send</Button>
       </form>
     </div>
   );

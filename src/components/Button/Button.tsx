@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { useFormStatus } from "react-dom";
 import { TButton } from "./types";
 
 export const Button: FC<TButton> = ({
@@ -7,6 +8,8 @@ export const Button: FC<TButton> = ({
   handleClick,
   isActive = true,
 }) => {
+  const { pending } = useFormStatus();
+
   const activeVariantClasses = isActive
     ? "bg-russian-violet text-white"
     : "text-russian-violet border border-russian-violet font-medium transition-colors duration-1000 hover:bg-russian-violet hover:text-white";
@@ -17,6 +20,9 @@ export const Button: FC<TButton> = ({
       className={`p-5 rounded-md cursor-pointer ${activeVariantClasses} text-center ${classes}`}
     >
       {children}
+      <span
+        className={`ml-2 size-5 block animate-spin border-3 border-white/30 border-t-white rounded-full relative top-1 inline-flex transition-opacity duration-1000 ${pending ? "opacity-100 z-10" : "opacity-0 -z-10"}`}
+      />
     </button>
   );
 };
