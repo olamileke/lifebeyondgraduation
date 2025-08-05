@@ -1,0 +1,110 @@
+import { FC, useState, useEffect, ChangeEvent } from "react";
+import { TContactDialog, TFormField } from "./types";
+import { Button } from "../Button";
+import { sendMessage } from "./api";
+
+export const ContactDialog: FC<TContactDialog> = ({
+  isOpen = false,
+  handleClose,
+}) => {
+  const [form, setForm] = useState<{
+    [key in TFormField]: string;
+  }>({ name: "", email: "", text: "" });
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    if (!isOpen) {
+      window.document.body.style.overflowY = "visible";
+      setForm({ name: "", email: "", text: "" });
+      setMessage("");
+      return;
+    }
+
+    window.document.body.style.overflowY = "hidden";
+    const nameInput = document.getElementById("nameInput");
+    nameInput?.focus();
+  }, [isOpen]);
+
+  const handleChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    field: TFormField
+  ) => {
+    setForm({ ...form, [field]: event.target.value });
+  };
+
+  const handleSubmit = async () => {
+    const formData = new FormData();
+
+    formData.set("name", form.name);
+    formData.set("email", form.email);
+    formData.set("text", form.text);
+
+    const message = await sendMessage(formData);
+
+    if (message.toLowerCase().includes("success")) {
+      setForm({ name: "", email: "", text: "" });
+    }
+
+    setMessage(message);
+  };
+
+  return (
+    <div
+      className={`fixed top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.6)] flex justify-center items-center transition-opacity duration-1000 ${
+        isOpen ? "opacity-100 z-10" : "opacity-0 -z-10"
+      }`}
+      onClick={handleClose}
+    >
+      <form
+        className="w-[90vw] sm:w-[480px] bg-white p-8 rounded"
+        onClick={(e) => e.stopPropagation()}
+        action={handleSubmit}
+      >
+        <p className="mb-5 text-[rgba(0,0,0,0.7)]">
+          {message.length > 0
+            ? message
+            : "Send your message via the form below"}
+        </p>
+
+        <input
+          type="text"
+          required
+          placeholder="Name"
+          className="w-full outline-none lbg__input mb-3 placeholder-[rgba(0,0,0,0.3)] text-[15px] transition-all duration-1000 border-3 border-[rgba(0,0,0,0.06)] focus:border-3 focus:border-[#9C7A97] px-3 py-3 rounded-sm"
+          id="nameInput"
+          value={form.name}
+          onChange={(e) => {
+            handleChange(e, "name");
+          }}
+        />
+
+        <input
+          type="email"
+          required
+          placeholder="Email Address"
+          className="w-full outline-none mb-3 placeholder-[rgba(0,0,0,0.3)] text-[15px] transition-all duration-1000 border-3 border-[rgba(0,0,0,0.06)] focus:border-3 focus:border-[#9C7A97] px-3 py-3 rounded-sm"
+          value={form.email}
+          onChange={(e) => {
+            handleChange(e, "email");
+          }}
+        />
+
+        <textarea
+          rows={4}
+          required
+          placeholder="What do you want to say ?"
+          className="w-full outline-none mb-3 placeholder-[rgba(0,0,0,0.3)] text-[15px] transition-all duration-1000 border-3 border-[rgba(0,0,0,0.06)] focus:border-3 focus:border-[#9C7A97] px-3 py-3 rounded-sm"
+          style={{ resize: "none" }}
+          value={form.text}
+          onChange={(e) => {
+            handleChange(e, "text");
+          }}
+        />
+
+        <Button type="submit" classes="w-full py-3">
+          Send
+        </Button>
+      </form>
+    </div>
+  );
+};
