@@ -1,5 +1,7 @@
+import { ButtonHTMLAttributes } from "react";
 import { TLink } from "../Link";
 
-export type TButton = Omit<TLink, "href" | "hasIcon" | "size"> & {
-  handleClick?: () => void;
-};
+export type TButton = ButtonHTMLAttributes<HTMLButtonElement> &
+  Omit<TLink, "href" | "hasIcon" | "size"> & {
+    handleClick?: () => void;
+  };

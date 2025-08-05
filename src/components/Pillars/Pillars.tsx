@@ -27,7 +27,7 @@ export const Pillars = () => {
   };
 
   return (
-    <section className="py-24">
+    <section className="py-24" id="#community">
       <div className="mx-auto max-w-[1200px] grid grid-cols-12">
         <div className="col-span-4 relative">
           <div className="absolute top-0 left-0 flex item-start gap-4">

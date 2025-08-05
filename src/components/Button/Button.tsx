@@ -7,6 +7,7 @@ export const Button: FC<TButton> = ({
   classes = "",
   handleClick,
   isActive = true,
+  ...props
 }) => {
   const { pending } = useFormStatus();
 
@@ -16,12 +17,13 @@ export const Button: FC<TButton> = ({
 
   return (
     <button
+      {...props}
       onClick={handleClick}
       className={`p-5 rounded-md cursor-pointer ${activeVariantClasses} text-center ${classes}`}
     >
       {children}
       <span
-        className={`ml-2 size-5 block animate-spin border-3 border-white/30 border-t-white rounded-full relative top-1 inline-flex transition-opacity duration-1000 ${pending ? "opacity-100 z-10" : "opacity-0 -z-10"}`}
+        className={`ml-2 size-5 block animate-spin border-3 border-white/30 border-t-white rounded-full relative top-1 inline-flex transition-opacity duration-500 ${pending ? "opacity-100 z-10" : "opacity-0 -z-10"}`}
       />
     </button>
   );

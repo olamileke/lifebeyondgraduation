@@ -32,14 +32,17 @@ export const ContactDialog: FC<TContactDialog> = ({
     setForm({ ...form, [field]: event.target.value });
   };
 
-  const handleSubmit = async (formData: FormData) => {
+  const handleSubmit = async () => {
+    const formData = new FormData();
+
+    formData.set("name", form.name);
+    formData.set("email", form.email);
+    formData.set("text", form.text);
+
     const message = await sendMessage(formData);
 
     if (message.toLowerCase().includes("success")) {
       setForm({ name: "", email: "", text: "" });
-      setTimeout(() => {
-        setMessage("");
-      }, 5000);
     }
 
     setMessage(message);
@@ -98,7 +101,9 @@ export const ContactDialog: FC<TContactDialog> = ({
           }}
         />
 
-        <Button classes="w-full py-3">Send</Button>
+        <Button type="submit" classes="w-full py-3">
+          Send
+        </Button>
       </form>
     </div>
   );
