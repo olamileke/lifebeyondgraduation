@@ -16,7 +16,7 @@ export const Header = () => (
         </div>
       </div>
 
-      <Link href={"/blog"} size="sm">
+      <Link href={"/blog"} classes="!py-3">
         Blog
       </Link>
     </div>

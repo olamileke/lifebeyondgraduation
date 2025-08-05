@@ -42,11 +42,14 @@ export const About = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full">
-            <Link href="https://bit.ly/register-lbg" classes="w-full">
+            <Link
+              href="https://bit.ly/register-lbg"
+              classes="!py-3 !sm:py-5 w-full"
+            >
               Register
             </Link>
             <Button
-              classes="w-full"
+              classes="!py-3 !sm:py-5 w-full"
               handleClick={handleDialogOpen}
               isActive={false}
             >
