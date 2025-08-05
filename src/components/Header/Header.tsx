@@ -8,10 +8,10 @@ export const Header = () => (
         <p className="text-xl mr-24">LBG</p>
 
         <div className="flex gap-13 text-[15px] font-light">
-          <a href="/#home" className="font-medium">
+          <NextLink href="/#home" className="font-medium">
             Home
-          </a>
-          <a href="/#community">Community</a>
+          </NextLink>
+          <NextLink href="/#community">Community</NextLink>
           <NextLink href="/#about">About</NextLink>
         </div>
       </div>

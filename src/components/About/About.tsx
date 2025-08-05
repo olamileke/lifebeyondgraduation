@@ -24,7 +24,7 @@ export const About = () => {
           />
         </div>
         <div className="col-span-0 lg:col-span-1" />
-        <div className="mt-6 lg:mt-0 col-span-12 lg:col-span-6 flex flex-col items-center sm:items-start justify-center">
+        <div className="mt-6 lg:mt-0 col-span-12 lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
           <span className="px-4 py-2 rounded text-base block w-fit mb-5 md:mb-4 lg:mb-7 font-medium bg-russian-violet text-white">
             why lifebeyondgraduation ?
           </span>
