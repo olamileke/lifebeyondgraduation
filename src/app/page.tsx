@@ -11,7 +11,7 @@ export default function IndexPage() {
     <>
       <div
         id="home"
-        className="relative w-screen h-screen bg-slate-blue text-black"
+        className="relative w-screen lg:h-screen bg-slate-blue text-black"
       >
         <Header />
         <Hero />

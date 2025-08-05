@@ -8,6 +8,11 @@
   --color-russian-violet: #392759;
   --color-black: #000000;
 
+  --breakpoint-*: initial;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 769px;
+  --breakpoint-lg: 1025px;
+
   --font-*: initial;
   --font-Exo-2: "Exo 2", sans-serif;
 }

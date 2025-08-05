@@ -56,7 +56,7 @@ export const ContactDialog: FC<TContactDialog> = ({
       onClick={handleClose}
     >
       <form
-        className="w-[480px] bg-white p-8 rounded"
+        className="w-[90vw] sm:w-[480px] bg-white p-8 rounded"
         onClick={(e) => e.stopPropagation()}
         action={handleSubmit}
       >

@@ -16,7 +16,7 @@ export const Link: FC<TLink> = ({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`px-5 bg-russian-violet text-white group duration-1000 transition-opacity opacity-100 hover:opacity-90 ${
+      className={`px-5 bg-russian-violet text-[18px] md:text-base text-white group duration-1000 transition-opacity opacity-100 hover:opacity-90 ${
         size === "sm" ? "py-3" : "py-5"
       } rounded-md text-center ${classes}`}
     >

@@ -6,7 +6,7 @@ import { HiMail } from "react-icons/hi";
 export const Footer = () => {
   return (
     <section className="bg-russian-violet text-white">
-      <div className="mx-auto max-w-[1200px] py-22 flex justify-between">
+      <div className="mx-auto w-[85%] w-[90%] max-w-[1200px] py-22 px-1 lg:px-0 flex gap-4 sm:gap-0 flex-col sm:flex-row justify-center sm:justify-between items-center">
         <p className="text-[15px]">
           LIFEBEYONDGRADUATION &copy; {new Date().getFullYear()}
         </p>

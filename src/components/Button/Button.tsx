@@ -19,7 +19,7 @@ export const Button: FC<TButton> = ({
     <button
       {...props}
       onClick={handleClick}
-      className={`p-5 rounded-md cursor-pointer ${activeVariantClasses} text-center ${classes}`}
+      className={`p-5 rounded-md cursor-pointer text-[18px] md:text-base ${activeVariantClasses} text-center ${classes}`}
     >
       {children}
       <span

@@ -1,10 +1,9 @@
-import { IoMdArrowUp } from "react-icons/io";
 import { Link } from "../Link";
 
 export const Hero = () => (
-  <section className="grid grid-cols-12 mx-auto max-w-[1200px] h-full py-[103px] py-5 px-10">
-    <div className="col-span-5 flex flex-col justify-center relative -bottom-[-3vh]">
-      <p className="text-6xl/20 mb-5">
+  <section className="grid grid-cols-12 mx-auto w-[85%] sm:w-[90%] max-w-[1200px] h-full py-[103px] lg:px-10">
+    <div className="col-span-12 lg:col-span-5 flex flex-col justify-center relative -bottom-[0.65vh] lg:-bottom-[-3vh]">
+      <p className="text-5xl/16 md:text-6xl/20 mb-5">
         From Campus Life to Real-Life Readiness!
       </p>
       <p className="text-xl/8 font-light mb-8">
@@ -15,11 +14,11 @@ export const Hero = () => (
         Join the Community
       </Link>
     </div>
-    <div className="col-span-1"></div>
-    <div className="col-span-6">
+    <div className="col-span-0 lg:col-span-1"></div>
+    <div className="col-span-0 lg:col-span-6">
       <img
         src="https://res.cloudinary.com/olamileke/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1753889065/lifebeyondgraduation/andres-c7hAijhBe4Y-unsplash_fsgxtl.jpg"
-        className="h-full rounded-md object-cover"
+        className="hidden lg:inline-block h-full rounded-md object-cover"
       />
     </div>
   </section>
