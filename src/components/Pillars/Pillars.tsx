@@ -27,9 +27,9 @@ export const Pillars = () => {
   };
 
   return (
-    <section className="pt-12 pb-14 md:py-24" id="#community">
+    <section className="pt-12 pb-1 sm:pb-14 md:py-24" id="community">
       <div className="mx-auto w-[85%] w-[90%] max-w-[1200px] grid grid-cols-12">
-        <div className="col-span-12 md:col-span-4 order-2 md:order-none relative flex flex-col-reverse items-center md:block">
+        <div className="col-span-12 md:col-span-4 order-2 md:order-none relative bottom-[3.5rem] sm:bottom-0 flex flex-col-reverse items-center md:block">
           <div className="md:absolute top-0 left-0 flex item-start gap-4">
             <BsStars className="hidden md:block text-7xl relative bottom-3 text-[#FFD700]" />
             <p className="text-center md:text-left text-[17.5px] md:text-xl lg:text-lg text-[rgba(0,0,0,0.9)] sm:text-[rgba(0,0,0,0.8)] lg:text-[rgba(0,0,0,0.85)] font-light">
@@ -65,7 +65,7 @@ export const Pillars = () => {
           </div>
         </div>
         <div className="col-span-0 md:col-span-1" />
-        <div className="col-span-12 md:col-span-7 mb-2 md:mb-0 order-1 md:order-none overflow-x-scroll !scroll-smooth flex gap-6 md:gap-4 pillars px-1">
+        <div className="col-span-12 md:col-span-7 mb-2 sm:mb-4 md:mb-0 order-1 md:order-none overflow-x-scroll !scroll-smooth flex gap-6 md:gap-4 pillars px-1">
           {renderPillars()}
         </div>
       </div>
