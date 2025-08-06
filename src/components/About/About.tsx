@@ -15,7 +15,7 @@ export const About = () => {
   };
 
   return (
-    <section id="#about">
+    <section id="about">
       <div className="mx-auto w-[85%] w-[90%] max-w-[1300px] p-4 sm:p-8 lg:p-24 mb-12 md:mb-24 grid grid-cols-12 rounded-md bg-slate-blue">
         <div className="col-span-12 lg:col-span-5 relative">
           <img
