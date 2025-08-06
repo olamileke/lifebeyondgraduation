@@ -29,7 +29,7 @@ export const About = () => {
             why lifebeyondgraduation ?
           </span>
 
-          <p className="font-light text-lg/8 md:text-[16px]/8 mb-7 md:mb-4 lg:mb-7">
+          <p className="font-light text-black text-lg/8 md:text-[16px]/8 mb-7 md:mb-4 lg:mb-7">
             Making the leap from the classroom to the real world can be
             overwhelming—suddenly, the rules change, and you’re expected to
             figure it all out on your own. Yet, there are few programs truly
