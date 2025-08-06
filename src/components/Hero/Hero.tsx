@@ -3,14 +3,14 @@ import { Link } from "../Link";
 export const Hero = () => (
   <section className="grid grid-cols-12 mx-auto w-[85%] sm:w-[90%] max-w-[1200px] h-full py-[103px] lg:px-10">
     <div className="col-span-12 lg:col-span-5 flex flex-col justify-center relative -bottom-[0.65vh] lg:-bottom-[-3vh]">
-      <p className="text-5xl/16 md:text-6xl/20 mb-5">
+      <p className="text-3xl sm:text-4xl/12 md:text-5xl/16 md:text-6xl/20 mb-5">
         From Campus Life to Real-Life Readiness!
       </p>
-      <p className="text-xl/8 font-light mb-8">
+      <p className="text-lg sm:text-xl/8 font-light mb-8">
         You’ve got the degree—now get the skills. From job interviews to
         budgeting and beyond, we help you thrive where school left off.
       </p>
-      <Link href={"/community"} hasIcon={true}>
+      <Link href={"/community"} hasIcon={true} classes="py-3 sm:py-5">
         Join the Community
       </Link>
     </div>

@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import { Link } from "../Link";
 
 export const Header = () => (
-  <header className="invisible sm:visible absolute top-0 left-0 w-full">
+  <header className="hidden sm:block absolute top-0 left-0 w-full">
     <div className="mx-auto w-[90%] max-w-[1200px] flex justify-between items-center mx-auto py-5 max-w-[1200px]">
       <div className="flex items-center">
         <p className="text-xl mr-24">LBG</p>
@@ -16,7 +16,7 @@ export const Header = () => (
         </div>
       </div>
 
-      <Link href={"/blog"} classes="!py-3">
+      <Link href={"/blog"} classes="py-3">
         Blog
       </Link>
     </div>

@@ -20,7 +20,9 @@ export const Pillar: FC<TPillar> = ({
             : "bg-white text-russian-violet"
         }`}
       >
-        <p className="text-2xl font-medium mb-4">{heading}</p>
+        <p className="text-[1.35rem] md:text-2xl font-medium mb-2 md:mb-4">
+          {heading}
+        </p>
         <p className="font-light text-lg md:text-base">{description}</p>
       </div>
     </div>

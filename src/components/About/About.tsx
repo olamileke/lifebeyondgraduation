@@ -16,7 +16,7 @@ export const About = () => {
 
   return (
     <section id="#about">
-      <div className="mx-auto w-[85%] w-[90%] max-w-[1300px] p-4 sm:p-8 lg:p-24 mb-24 grid grid-cols-12 rounded-md bg-slate-blue">
+      <div className="mx-auto w-[85%] w-[90%] max-w-[1300px] p-4 sm:p-8 lg:p-24 mb-12 md:mb-24 grid grid-cols-12 rounded-md bg-slate-blue">
         <div className="col-span-12 lg:col-span-5 relative">
           <img
             className="rounded-md w-full max-h-[500px] lg:max-h-none object-cover"
@@ -24,12 +24,12 @@ export const About = () => {
           />
         </div>
         <div className="col-span-0 lg:col-span-1" />
-        <div className="mt-6 lg:mt-0 col-span-12 lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
-          <span className="px-4 py-2 rounded text-base block w-fit mb-5 md:mb-4 lg:mb-7 font-medium bg-russian-violet text-white">
+        <div className="mt-5 lg:mt-0 col-span-12 lg:col-span-6 flex flex-col items-center lg:items-start justify-center">
+          <span className="px-4 py-2 rounded text-base block w-fit mb-4 lg:mb-7 font-medium bg-russian-violet text-white">
             why lifebeyondgraduation ?
           </span>
 
-          <p className="font-light text-black text-lg/8 md:text-[16px]/8 mb-7 md:mb-4 lg:mb-7">
+          <p className="font-light text-black text-center lg:text-left text-lg/8 md:text-[16px]/8 mb-7 md:mb-4 lg:mb-7">
             Making the leap from the classroom to the real world can be
             overwhelming—suddenly, the rules change, and you’re expected to
             figure it all out on your own. Yet, there are few programs truly
@@ -44,12 +44,12 @@ export const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 w-full">
             <Link
               href="https://bit.ly/register-lbg"
-              classes="!py-3 !sm:py-5 w-full"
+              classes="py-3 sm:py-5 w-full"
             >
               Register
             </Link>
             <Button
-              classes="!py-3 !sm:py-5 w-full"
+              classes="py-[0.7rem] sm:py-5 w-full"
               handleClick={handleDialogOpen}
               isActive={false}
             >
