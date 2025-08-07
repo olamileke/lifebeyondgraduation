@@ -39,7 +39,7 @@ export const Pillars = () => {
               what’s next.
             </p>
           </div>
-          <div className="md:absolute bottom-4 left-0 flex mb-4 md:mb-0 gap-3 md:gap-4">
+          <div className="md:absolute bottom-[11px] left-0 flex mb-4 md:mb-0 gap-3 md:gap-4">
             <span
               className={`size-12 md:size-16 group flex justify-center items-center cursor-pointer transition transition-colors delay-200 block ${
                 scrollStatus === "beginning"
