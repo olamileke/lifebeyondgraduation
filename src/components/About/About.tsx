@@ -36,9 +36,9 @@ export const About = () => {
             dedicated to guiding graduates through this crucial transition. This
             community exists to bridge that gap, equipping young adults with the
             skills, support, and confidence to thrive beyond the walls of
-            school. Are you a final year student ?, interested in mentoring ?,
-            or you just want to partner with us in whatever way, register or get
-            in touch !
+            school. Register today if you are a final year student or interested
+            in mentoring. Or if you want to partner with us in any way, please
+            get in touch !
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full">

@@ -27,7 +27,7 @@ export const Pillars = () => {
   };
 
   return (
-    <section className="pt-12 pb-1 sm:pb-14 md:py-24" id="community">
+    <section className="pt-10 sm:pt-12 pb-1 sm:pb-14 md:py-24" id="community">
       <div className="mx-auto w-[85%] w-[90%] max-w-[1200px] grid grid-cols-12">
         <div className="col-span-12 md:col-span-4 order-2 md:order-none relative bottom-[3.5rem] sm:bottom-0 flex flex-col-reverse items-center md:block">
           <div className="md:absolute top-0 left-0 flex item-start gap-4">
@@ -39,7 +39,7 @@ export const Pillars = () => {
               what’s next.
             </p>
           </div>
-          <div className="md:absolute bottom-4 left-0 flex mb-4 md:mb-0 gap-3 md:gap-4">
+          <div className="md:absolute bottom-[11px] left-0 flex mb-4 md:mb-0 gap-3 md:gap-4">
             <span
               className={`size-12 md:size-16 group flex justify-center items-center cursor-pointer transition transition-colors delay-200 block ${
                 scrollStatus === "beginning"

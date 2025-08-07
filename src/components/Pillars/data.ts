@@ -25,7 +25,7 @@ export const pillars: TPillar[] = [
   },
   {
     imageUrl:
-      "https://res.cloudinary.com/olamileke/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1753900568/lifebeyondgraduation/nelson-ndongala-xqLiJ_7YbFI-unsplash_u3zp0z.jpg",
+      "https://res.cloudinary.com/olamileke/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1754569478/lifebeyondgraduation/andrej-lisakov-kw6UuM73OjM-unsplash_kmnhn9.jpg",
     heading: "Business Exposure",
     description:
       "Discover what it takes to build, launch, and grow bold ideas that solve real problems.",
