@@ -7,8 +7,9 @@ export const Hero = () => (
         From Campus Life to Real-Life Readiness!
       </p>
       <p className="text-lg sm:text-xl/8 font-light mb-8">
-        About to get the degree — don't forget the skills. From job interviews
-        to budgeting and beyond, we help you thrive where school left off.
+        About to get the degree — don{"'"}t forget the skills. From job
+        interviews to budgeting and beyond, we help you thrive where school left
+        off.
       </p>
       <Link href={"/community"} hasIcon={true} classes="py-3 sm:py-5">
         Join the Community
