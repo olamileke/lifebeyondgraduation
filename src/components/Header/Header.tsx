@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "../Link";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { HiOutlineArrowRight } from "react-icons/hi";
+import { BsWindowSidebar } from "react-icons/bs";
 
 export const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -20,9 +21,13 @@ export const Header = () => {
     setActiveSection(hash.slice(1));
     setIsFixed(window.scrollY > 48);
 
-    document.body.addEventListener("scroll", () => {
+    const handleScroll = () => {
       setIsFixed(window.scrollY > 48);
-    });
+    };
+
+    document.body.addEventListener("scroll", handleScroll);
+
+    return () => document.body.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLinkClick = (section: string) => {

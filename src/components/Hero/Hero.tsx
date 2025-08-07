@@ -1,7 +1,7 @@
 import { Link } from "../Link";
 
 export const Hero = () => (
-  <section className="grid grid-cols-12 mx-auto w-[85%] sm:w-[90%] max-w-[1200px] h-full pt-[103px] pb-[75px] md:py-[103px] lg:px-10">
+  <section className="grid grid-cols-12 mx-auto w-[85%] sm:w-[90%] max-w-[1200px] h-full pt-[85px] pb-[75px] md:py-[103px] lg:px-10">
     <div className="col-span-12 lg:col-span-5 flex flex-col justify-center relative -bottom-[0.65vh] lg:-bottom-[-3vh]">
       <p className="text-3xl sm:text-4xl/12 md:text-5xl/16 md:text-6xl/20 mb-5">
         From Campus Life to Real-Life Readiness!
