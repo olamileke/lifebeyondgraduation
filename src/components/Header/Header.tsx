@@ -25,9 +25,9 @@ export const Header = () => {
       setIsFixed(window.scrollY > 48);
     };
 
-    document.body.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => document.body.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleLinkClick = (section: string) => {
