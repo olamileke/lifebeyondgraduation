@@ -61,7 +61,9 @@ export const Header = () => {
         className={`${isFixed ? "bg-white shadow" : "bg-transparent shadow-none"} z-20 fixed transition-all duration-500 top-0 left-0 w-full`}
       >
         <div className="mx-auto w-[85%] sm:w-[90%] max-w-[1200px] z-20 flex justify-between items-center mx-auto py-5 max-w-[1200px]">
-          <div className="flex items-center text-russian-violet">
+          <div
+            className={`flex items-center transition-colors duration-500 ${isFixed ? "text-russian-violet" : "text-black"}`}
+          >
             <p className="text-xl mr-24">LBG</p>
 
             <div className="hidden md:flex gap-13 text-[15px] font-light">
