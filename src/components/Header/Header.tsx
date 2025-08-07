@@ -20,7 +20,7 @@ export const Header = () => {
     setActiveSection(hash.slice(1));
     setIsFixed(window.scrollY > 48);
 
-    window.addEventListener("scroll", () => {
+    document.body.addEventListener("scroll", () => {
       setIsFixed(window.scrollY > 48);
     });
   }, []);
