@@ -15,16 +15,14 @@ export const Header = () => {
 
     if (!hash) {
       setActiveSection("home");
-      return;
+    } else {
+      setActiveSection(hash.slice(1));
+      setIsFixed(window.scrollY > 48);
     }
-
-    setActiveSection(hash.slice(1));
-    setIsFixed(window.scrollY > 48);
 
     const handleScroll = () => {
       setIsFixed(window.scrollY > 48);
     };
-
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
